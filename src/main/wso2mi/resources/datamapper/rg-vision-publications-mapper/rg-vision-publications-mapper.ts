@@ -28,7 +28,13 @@ interface OutputRoot {
  * inputVariable : inputroot
 */
 export function mapFunction(input: Root): OutputRoot {
-    return {}
+    return {
+        data: input["Computer Vision"],
+        metadata: {
+            count: mapPublicationCount(input["Computer Vision"])
+        },
+        response: "success"
+    }
 }
 
 
